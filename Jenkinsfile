@@ -2,22 +2,19 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/SammekG/ai-cfn-validation-poc.git'
-            }
-        }
-
         stage('AI CloudFormation Validation') {
             steps {
-                sh 'python3 ai_validator.py ecs-stack.yaml'
+                sh 'ls -l'
+                sh 'python3 validate_cfn.py templates/template.yaml'
             }
         }
 
         stage('Deploy (Optional)') {
+            when {
+                expression { false }
+            }
             steps {
-                echo "Deployment stage"
+                echo 'Deployment skipped'
             }
         }
     }
