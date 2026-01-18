@@ -5,7 +5,7 @@ pipeline {
         stage('AI CloudFormation Validation') {
             steps {
                 sh 'ls -l'
-                sh 'python3 validate_cfn.py templates/template.yaml'
+                sh 'python3 ai_validator.py ecs-stack.yaml'
             }
         }
 
