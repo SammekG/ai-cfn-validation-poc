@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/YOUR-ORG/ai-cfn-validation-poc.git'
+                git 'https://github.com/SammekG/ai-cfn-validation-poc.git'
             }
         }
 
