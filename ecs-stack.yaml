@@ -12,7 +12,7 @@ Resources:
   ECSTaskDefinition:
     Type: AWS::ECS::TaskDefinition
     Properties:
-      Cpu: "2024"
+      Cpu: "1024"
       Memory: "3656"
       NetworkMode: awsvpc
       RequiresCompatibilities:
