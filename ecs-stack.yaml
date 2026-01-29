@@ -7,12 +7,12 @@ Resources:
         - IpProtocol: tcp
           FromPort: 80
           ToPort: 80
-          CidrIp: 0.0.0.0/0
+          CidrIp: 10.0.0.0/16
 
   ECSTaskDefinition:
     Type: AWS::ECS::TaskDefinition
     Properties:
-      Cpu: "3458"
+      Cpu: "1024"
       Memory: "3656"
       NetworkMode: awsvpc
       RequiresCompatibilities:
